@@ -1,0 +1,18 @@
+---
+all:
+  children:
+    FABRIC:
+      children:
+        WAN1:
+          children:
+            WAN1_PE_ROUTERS:
+              hosts:
+                pe1:
+                  ansible_host: 172.16.1.101
+                pe2:
+                  ansible_host: 172.16.1.102
+                pe3:
+                  ansible_host: 172.16.1.103
+        NETWORK_SERVICES:
+          children:
+            WAN1_PE_ROUTERS:
